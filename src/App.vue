@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Progresso />
+    <inserir-tarefa />
+    <Tarefas />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Progresso from "./components/Progresso";
+import inserirTarefa from "./components/inserirTarefa";
+import Tarefas from "./components/Tarefas";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { Progresso, inserirTarefa, Tarefas },
+};
 </script>
 
 <style>
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115));
+  color: #fff;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#app h1 {
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 3rem;
 }
 </style>
